@@ -30,3 +30,5 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export default withLayoutMain(Home);
