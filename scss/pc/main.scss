@@ -1,0 +1,623 @@
+/** IMPORTS **/
+@use "../variables" as *;
+
+// @use "../reset";
+@use "./homepage/homepage";
+
+#pc-wrap {
+  #top {
+    .navbar {
+      .navbar-main {
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 87px;
+        padding: 22px 0px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+        &.transparent {
+          background-color: #181a209e;
+        }
+
+        .container {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          .logo-box {
+            img {
+              width: 150px;
+              cursor: pointer;
+            }
+          }
+
+          .router-box {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 617px;
+
+            div {
+              position: relative;
+              font-family: $font;
+              font-size: 15px;
+              font-weight: 600;
+              font-style: normal;
+              line-height: normal;
+              color: #eeeeee;
+              cursor: pointer;
+            }
+          }
+
+          .user-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 270px;
+
+            .join-box {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 184px;
+              height: 47px;
+              border: 1px solid #ffffff;
+              border-radius: 60px;
+              cursor: pointer;
+
+              svg {
+                margin-right: 10px;
+                color: #ffffff;
+              }
+
+              span {
+                font-family: $font;
+                font-size: 14px;
+                font-weight: 600;
+                font-style: normal;
+                line-height: normal;
+                color: #ffffff;
+              }
+            }
+
+            .login-user {
+              img {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-main {
+    position: relative;
+    width: 100%;
+    height: 860px;
+  }
+
+  .header-basic {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 557px;
+    background: black;
+
+    &.auth {
+      height: 300px;
+    }
+
+    .container {
+      margin-top: 175px;
+
+      strong {
+        font-family: $font;
+        font-size: 48px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.96px;
+        text-transform: capitalize;
+        color: #fff;
+      }
+
+      span {
+        font-family: $font;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 26px;
+        color: #fff;
+      }
+    }
+  }
+
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 626.8px;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 47px;
+    text-align: left;
+    color: #929495;
+
+    &Child {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      left: 0%;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .groupParent {
+    position: absolute;
+    top: 9.57%;
+    right: 16.15%;
+    bottom: 8.58%;
+    left: 16.15%;
+    width: 67.71%;
+    height: 81.84%;
+  }
+
+  .groupWrapper {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 11.64%;
+    left: 0%;
+    width: 100%;
+    height: 88.36%;
+  }
+
+  .groupContainer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .right {
+    position: absolute;
+    top: 23.19%;
+    right: 83.15%;
+    bottom: 17.74%;
+    left: 0%;
+    width: 16.85%;
+    height: 59.08%;
+
+    .social {
+      position: absolute;
+      top: 70.3%;
+      right: 0%;
+      bottom: 0.01%;
+      left: 0%;
+      width: 100%;
+      height: 29.69%;
+
+      .media {
+        position: absolute;
+        top: 39.09%;
+        right: 0%;
+        bottom: 0.03%;
+        left: 0%;
+        width: 100%;
+        height: 60.88%;
+
+        .div {
+          position: absolute;
+          top: 0%;
+          left: 75.8%;
+          display: inline-block;
+          width: 24.2%;
+          height: 100%;
+          text-transform: capitalize;
+        }
+
+        .facebookIcon {
+          position: absolute;
+          top: 26.43%;
+          right: 85.39%;
+          bottom: 13.65%;
+          left: 0%;
+          overflow: hidden;
+          width: 14.61%;
+          max-width: 100%;
+          height: 59.92%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+
+        .instagramIcon {
+          position: absolute;
+          top: 26.43%;
+          right: 36.07%;
+          bottom: 13.65%;
+          left: 49.32%;
+          overflow: hidden;
+          width: 14.61%;
+          max-width: 100%;
+          height: 59.92%;
+          max-height: 100%;
+        }
+
+        .twitterIcon {
+          position: absolute;
+          top: 32.05%;
+          right: 60.73%;
+          bottom: 19.4%;
+          left: 24.66%;
+          overflow: hidden;
+          width: 14.61%;
+          max-width: 100%;
+          height: 48.55%;
+          max-height: 100%;
+        }
+      }
+
+      .followUsOn {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: inline-block;
+        width: 100%;
+        height: 24.91%;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #fff;
+      }
+    }
+
+    .info {
+      position: absolute;
+      top: 0%;
+      right: 5.48%;
+      bottom: 43.24%;
+      left: 0%;
+      width: 94.52%;
+      height: 56.76%;
+      font-family: Poppins;
+      font-size: 14px;
+      color: #bebdbd;
+
+      .neeLiveSupportParent {
+        position: absolute;
+        top: 54.71%;
+        right: 40.63%;
+        bottom: 0.02%;
+        left: 0%;
+        width: 59.37%;
+        height: 45.26%;
+
+        .neeLiveSupport {
+          position: absolute;
+          top: 0%;
+          left: 0.22%;
+          display: inline-block;
+          width: 99.76%;
+          height: 100%;
+          line-height: 40px;
+        }
+
+        .hihomezcom {
+          position: absolute;
+          top: 37.5%;
+          left: 0%;
+          display: inline-block;
+          width: 98.94%;
+          height: 28.78%;
+          font-size: 15px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      .totalFreeCustomer {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: inline-block;
+        width: 100%;
+        height: 45.07%;
+        line-height: 40px;
+      }
+
+      .div2 {
+        position: absolute;
+        top: 16.68%;
+        left: 0%;
+        display: inline-block;
+        width: 93.72%;
+        height: 13.03%;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #fff;
+      }
+    }
+  }
+
+  .left {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 48.62%;
+    width: 51.38%;
+    height: 100%;
+    font-family: Poppins;
+    font-size: 15px;
+    color: #fff;
+
+    .groupIcon {
+      position: absolute;
+      top: 7.24%;
+      right: 90.08%;
+      bottom: 82.26%;
+      left: 0%;
+      overflow: hidden;
+      width: 9.92%;
+      max-width: 100%;
+      height: 10.5%;
+      max-height: 100%;
+    }
+
+    .navs {
+      position: absolute;
+      top: 34.88%;
+      right: 0%;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 65.12%;
+
+      .div3 {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        bottom: 37.16%;
+        left: 85.03%;
+        width: 14.97%;
+        height: 62.84%;
+
+        .discover {
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          display: inline-block;
+          width: 81.7%;
+          height: 11.32%;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .seoulGyeongidoBusan {
+          position: absolute;
+          top: 21.18%;
+          left: 0%;
+          display: inline-block;
+          width: 100%;
+          height: 78.81%;
+          font-size: 14px;
+          line-height: 40px;
+          color: #bebdbd;
+        }
+      }
+
+      .div4 {
+        position: absolute;
+        top: 0%;
+        right: 29.05%;
+        bottom: 0%;
+        left: 47.02%;
+        width: 23.94%;
+        height: 100%;
+
+        .quickLinks {
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          display: inline-block;
+          width: 73.3%;
+          height: 7.11%;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .termsOfUseContainer {
+          position: absolute;
+          top: 13.31%;
+          left: 0%;
+          display: inline-block;
+          width: 100%;
+          height: 86.69%;
+          font-size: 14px;
+          line-height: 40px;
+          color: #bebdbd;
+
+          .privacyPolicy {
+            text-decoration: underline;
+            color: #fff;
+          }
+        }
+      }
+
+      .div5 {
+        position: absolute;
+        top: 0%;
+        right: 72.75%;
+        bottom: 61.79%;
+        left: 0%;
+        width: 27.25%;
+        height: 38.21%;
+
+        .popularSearch {
+          position: absolute;
+          top: 0%;
+          left: 0.03%;
+          display: inline-block;
+          width: 74.01%;
+          height: 18.62%;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .apartmentForRent {
+          position: absolute;
+          top: 34.68%;
+          left: 0%;
+          display: inline-block;
+          width: 100%;
+          height: 65.34%;
+          font-size: 14px;
+          line-height: 40px;
+          color: #bebdbd;
+        }
+      }
+    }
+
+    .newsletter {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      bottom: 77.21%;
+      left: 0%;
+      width: 100%;
+      height: 22.79%;
+      font-size: 14px;
+
+      .keepYourselfUp {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: inline-block;
+        width: 33.08%;
+        height: 20.33%;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      .input {
+        position: absolute;
+        top: 38.04%;
+        right: 0.01%;
+        bottom: 0%;
+        left: 0.01%;
+        width: 99.99%;
+        height: 61.96%;
+
+        &Child {
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          bottom: 0%;
+          left: 0%;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background-color: #fff;
+          opacity: 0.04;
+        }
+
+        .yourEmail {
+          position: absolute;
+          top: 31.41%;
+          left: 4.48%;
+          display: inline-block;
+          width: 15.42%;
+          height: 37.19%;
+          line-height: 26px;
+        }
+
+        .subscribe {
+          position: absolute;
+          top: 34.27%;
+          left: 79.8%;
+          display: inline-block;
+          width: 15.57%;
+          height: 32.81%;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .rectangleParent {
+    position: absolute;
+    top: 452.98px;
+    left: 0px;
+    width: 1300px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #bebdbd;
+
+    .groupChild {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 1300px;
+      height: 60px;
+      background-color: rgba(217, 217, 217, 0);
+    }
+
+    .groupWrapper4 {
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      width: 1300px;
+      height: 40px;
+
+      .nestarAllRightsReservedParent {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 40px;
+
+        .nestarAll {
+          position: absolute;
+          top: 2px;
+          left: 0px;
+          display: inline-block;
+          width: 268.9px;
+          font-weight: 500;
+          line-height: 36px;
+        }
+
+        .privacyTerms {
+          position: absolute;
+          top: 0px;
+          left: 1124.79px;
+          display: inline-block;
+          width: 175.2px;
+          font-family: Poppins;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
