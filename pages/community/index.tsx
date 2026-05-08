@@ -1,18 +1,32 @@
-import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
-import { Stack } from "@mui/material";
+import withLayoutMain from "@/libs/components/layout/LayoutHome";
+import { Box, Container, Stack } from "@mui/material";
+import { brown, green } from "@mui/material/colors";
 import { NextPage } from "next";
-
-
-const Community: NextPage = () => {
-
+const Home: NextPage = () => {
   return (
-    <div style={{ margin: "20px 0" }}>
-      {" "}
-      <Stack className='container'>COMMUNITY</Stack>
-
-
-    </div>
+    <>
+      <Stack>
+      <Stack className='home-page'>
+      <Stack>
+            <Stack className='container'>Trend Properties</Stack>
+          </Stack>
+          <Stack>
+            <Stack className='container'>Popular Properties</Stack>
+          </Stack>
+          <Stack>
+          <Stack className='container'>Advertisement</Stack>
+          </Stack>
+          <Stack>
+            <Stack className='container'>Top Properties</Stack>
+          </Stack>
+          <Stack>
+            <Stack className='container'>Top Agents</Stack>
+          </Stack>
+          <Stack>
+            <Stack className='container'>Event</Stack>
+          </Stack>
+        </Stack>
+      </Stack>
+    </>
   );
 };
-
-export default withLayoutBasic(Community);

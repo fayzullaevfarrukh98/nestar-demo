@@ -10,15 +10,15 @@ const Footer = () => {
       <Stack className={"main"}>
         <Stack className={"left"}>
           <Box component={"div"} className={"footer-box"}>
-            <img src='/img/logo/logoWhite.svg' alt='' className={"logo"} />
+            <img src="/img/logo/logoWhite.svg" alt="" className={"logo"} />
           </Box>
           <Box component={"div"} className={"footer-box"}>
             <span>total free customer care</span>
-            <p>+82 10 4867 2909</p>
+            <p>+82 10 5743 1859</p>
           </Box>
           <Box component={"div"} className={"footer-box"}>
             <span>nee live</span>
-            <p>+82 10 4867 2909</p>
+            <p>+82 10 5743 1859</p>
             <span>Support?</span>
           </Box>
           <Box component={"div"} className={"footer-box"}>
@@ -35,7 +35,7 @@ const Footer = () => {
           <Box component={"div"} className={"top"}>
             <strong>keep yourself up to date</strong>
             <div>
-              <input type='text' placeholder={"Your Email"} />
+              <input type="text" placeholder={"Your Email"} />
               <span>Subscribe</span>
             </div>
           </Box>
