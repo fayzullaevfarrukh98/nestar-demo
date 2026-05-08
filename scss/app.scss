@@ -1,6 +1,6 @@
 /** IMPORTS **/
-@use "variables" as *;
-@use "reset";
+@import "variables.scss";
+@import "reset.scss";
 
 /** VERSION: PC **/
 
@@ -13,6 +13,5 @@
     display: flex;
     width: 1300px;
     margin: 0 auto;
-    background: rgb(11, 141, 174);
   }
 }
