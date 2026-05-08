@@ -4,8 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TopAgentCard from "./TopAgentCard";
 
-const TopAgents = ({ initialInput, ...props }: any) => {
-  const [topAgents, setTopAgents] = useState<number[]>(initialInput);
+// ✅ initialInput ga default qiymat berdik
+const TopAgents = ({ initialInput = [1, 2, 3, 4, 5, 6, 7], ...props }: any) => {
+  
+  // ✅ ?? [] — undefined kelsa bo'sh massiv ishlatadi
+  const [topAgents, setTopAgents] = useState<number[]>(initialInput ?? []);
 
   return (
     <Stack className="top-agents">
@@ -57,8 +60,9 @@ const TopAgents = ({ initialInput, ...props }: any) => {
   );
 };
 
-TopAgents.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 7],
-};
+// ✅ defaultProps o'chirildi
+// TopAgents.defaultProps = {
+//   initialInput: [1, 2, 3, 4, 5, 6, 7],
+// };
 
 export default TopAgents;

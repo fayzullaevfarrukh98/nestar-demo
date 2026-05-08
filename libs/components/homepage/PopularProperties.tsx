@@ -4,9 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import PopularPropertyCard from "./PopularPropertyCard";
 import Link from "next/link";
 
-const PopularProperties = ({ initialInput, ...props }: any) => {
+const PopularProperties = ({ initialInput = [1, 2, 3, 4, 5, 6, 7], ...props }: any) => {
+  //                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //                         props da default qiymat berish (ishonchli usul)
+
   const [popularProperties, setPopularProperties] =
-    useState<number[]>(initialInput);
+    useState<number[]>(initialInput ?? []);
+  //                                ^^^^^^^
+  //                   undefined kelsa, bo'sh massiv ishlatadi
 
   return (
     <Stack className="popular-properties">
@@ -56,8 +61,9 @@ const PopularProperties = ({ initialInput, ...props }: any) => {
   );
 };
 
-PopularProperties.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 7],
-};
+// Bu qatorni olib tashlash ham mumkin, chunki yuqorida default qiymat berdik
+// PopularProperties.defaultProps = {
+//   initialInput: [1, 2, 3, 4, 5, 6, 7],
+// };
 
 export default PopularProperties;

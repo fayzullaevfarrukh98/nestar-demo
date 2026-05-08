@@ -5,8 +5,11 @@ import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TopPropertyCard from "./TopPropertyCard";
 
-const TopProperties = ({ initialInput, ...props }: any) => {
-  const [topProperties, setTopProperties] = useState<number[]>(initialInput);
+// ✅ initialInput ga default qiymat berdik
+const TopProperties = ({ initialInput = [1, 2, 3, 4, 5, 6, 7], ...props }: any) => {
+  
+  // ✅ ?? [] — undefined kelsa bo'sh massiv ishlatadi
+  const [topProperties, setTopProperties] = useState<number[]>(initialInput ?? []);
 
   return (
     <Stack className="top-properties">
@@ -55,8 +58,9 @@ const TopProperties = ({ initialInput, ...props }: any) => {
   );
 };
 
-TopProperties.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 7],
-};
+// ✅ defaultProps o'chirildi — yuqorida default qiymat berdik
+// TopProperties.defaultProps = {
+//   initialInput: [1, 2, 3, 4, 5, 6, 7],
+// };
 
 export default TopProperties;
